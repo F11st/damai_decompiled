@@ -1,0 +1,9 @@
+package com.taobao.application.common.impl;
+
+/* compiled from: Taobao */
+/* loaded from: classes12.dex */
+public interface ICallbackGroup<T> {
+    void addCallback(T t);
+
+    void removeCallback(T t);
+}

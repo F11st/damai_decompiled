@@ -1,0 +1,63 @@
+package com.alibaba.motu.crashreporter;
+
+/* compiled from: Taobao */
+/* loaded from: classes6.dex */
+public class Constants {
+    public static final String ACCESS = "ACCESS";
+    public static final String ACCESS_SUBTYPE = "ACCESS_SUBTYPE";
+    public static final String APP_BUILD = "APP_BUILD";
+    public static final String APP_ID = "APP_ID";
+    public static final String APP_KEY = "APP_KEY";
+    public static final String APP_SUBVERSION = "APP_SUBVERSION";
+    public static final String APP_VERSION = "APP_VERSION";
+    public static final String ARG1 = "ARG1";
+    public static final String ARG2 = "ARG2";
+    public static final String ARG3 = "ARG3";
+    public static final String ARGS = "ARGS";
+    public static final String BRAND = "BRAND";
+    public static final String CARRIER = "CARRIER";
+    public static final String CHANNEL = "CHANNEL";
+    public static final String CONTEXT = "CONTEXT";
+    public static final String CONTROLLER = "_controller";
+    public static final String COUNTRY = "COUNTRY";
+    public static final String CPU = "CPU";
+    public static final String CRASH_SDK_BUILD = "CRASH_SDK_BUILD";
+    public static final String CRASH_SDK_NAME = "CRASH_SDK_NAME";
+    public static final String CRASH_SDK_VERSION = "CRASH_SDK_VERSION";
+    public static final String DEVICE_ID = "DEVICE_ID";
+    public static final String DEVICE_MODEL = "DEVICE_MODEL";
+    public static final String EVENTID = "EVENTID";
+    public static final String FINGERPRINT = "FINGERPRINT";
+    public static final String FIRST_INSTALL_TIME = "FIRST_INSTALL_TIME";
+    public static final String FOREGROUND = "_foreground";
+    public static final String IMEI = "IMEI";
+    public static final String IMSI = "IMSI";
+    public static final String LANGUAGE = "LANGUAGE";
+    public static final String LAST_UPDATE_TIME = "LAST_UPDATE_TIME";
+    public static final String LL_USERID = "LL_USERID";
+    public static final String LL_USERNICK = "LL_USERNICK";
+    public static final String OS = "OS";
+    public static final String OSVERSION = "OSVERSION";
+    public static final String PACKAGE_NAME = "PACKAGE_NAME";
+    public static final String PAGE = "PAGE";
+    public static final String PID = "PID";
+    public static final String PROCESS_NAME = "PROCESS_NAME";
+    public static final String RECORD_TIMESTAMP = "RECORD_TIMESTAMP";
+    public static final String REPORT_CREATE_TIME = "REPORT_CREATE_TIME";
+    public static final String REPORT_CREATE_TIMESTAMP = "REPORT_CREATE_TIMESTAMP";
+    public static final String REPORT_IGNORE = "REPORT_IGNORE";
+    public static final String REPORT_TAG = "REPORT_TAG";
+    public static final String REPORT_TYPE = "REPORT_TYPE";
+    public static final String RESERVE2 = "RESERVE2";
+    public static final String RESERVE3 = "RESERVE3";
+    public static final String RESERVE4 = "RESERVE4";
+    public static final String RESERVE5 = "RESERVE5";
+    public static final String RESERVES = "RESERVES";
+    public static final String RESOLUTION = "RESOLUTION";
+    public static final String SDKVERSION = "SDKVERSION";
+    public static final String STARTUP_TIME = "STARTUP_TIME";
+    public static final String USER = "USER";
+    public static final String USERID = "USERID";
+    public static final String USERNICK = "USERNICK";
+    public static final String UTDID = "UTDID";
+}

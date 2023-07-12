@@ -1,0 +1,92 @@
+package com.real.android.nativehtml.common.css;
+
+/* compiled from: Taobao */
+/* loaded from: classes5.dex */
+public enum CssProperty {
+    BORDER_COLLAPSE,
+    BORDER_SPACING,
+    CAPTION_SIDE,
+    COLOR,
+    DISPLAY,
+    EMPTY_CELLS,
+    FONT_SIZE,
+    FONT_STYLE,
+    FONT_VARIANT,
+    FONT_WEIGHT,
+    LINE_HEIGHT,
+    LIST_STYLE_POSITION,
+    LIST_STYLE_TYPE,
+    TEXT_ALIGN,
+    TEXT_DECORATION,
+    TEXT_INDENT,
+    TEXT_TRANSFORM,
+    USER_SELECT,
+    VISIBILITY,
+    WHITE_SPACE,
+    BACKGROUND_COLOR,
+    BACKGROUND_POSITION_X,
+    BACKGROUND_POSITION_Y,
+    BACKGROUND_REPEAT,
+    BORDER_TOP_COLOR,
+    BORDER_RIGHT_COLOR,
+    BORDER_BOTTOM_COLOR,
+    BORDER_LEFT_COLOR,
+    BORDER_TOP_SPACING,
+    BORDER_RIGHT_SPACING,
+    BORDER_BOTTOM_SPACING,
+    BORDER_LEFT_SPACING,
+    BORDER_TOP_STYLE,
+    BORDER_RIGHT_STYLE,
+    BORDER_BOTTOM_STYLE,
+    BORDER_LEFT_STYLE,
+    BORDER_TOP_WIDTH,
+    BORDER_RIGHT_WIDTH,
+    BORDER_BOTTOM_WIDTH,
+    BORDER_LEFT_WIDTH,
+    BOTTOM,
+    CLEAR,
+    CLIP,
+    FLOAT,
+    HEIGHT,
+    LEFT,
+    MARGIN_TOP,
+    MARGIN_RIGHT,
+    MARGIN_BOTTOM,
+    MARGIN_LEFT,
+    OVERFLOW,
+    TEXT_OVERFLOW,
+    PADDING_TOP,
+    PADDING_RIGHT,
+    PADDING_BOTTOM,
+    PADDING_LEFT,
+    POSITION,
+    RIGHT,
+    TABLE_LAYOUT,
+    TOP,
+    VERTICAL_ALIGN,
+    WIDTH,
+    Z_INDEX,
+    BACKGROUND,
+    BACKGROUND_IMAGE,
+    BACKGROUND_POSITION,
+    BORDER,
+    BORDER_COLOR,
+    BORDER_STYLE,
+    BORDER_WIDTH,
+    FONT,
+    FONT_FAMILY,
+    LIST_STYLE,
+    MARGIN,
+    PADDING,
+    MAX_WIDTH;
+    
+    public static final int REGULAR_PROPERTY_COUNT;
+    public static final int TEXT_PROPERTY_COUNT;
+
+    static {
+        CssProperty cssProperty = BACKGROUND_COLOR;
+        CssProperty cssProperty2 = BACKGROUND;
+        TEXT_PROPERTY_COUNT = cssProperty.ordinal();
+        REGULAR_PROPERTY_COUNT = cssProperty2.ordinal();
+    }
+}

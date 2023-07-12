@@ -1,0 +1,9 @@
+package com.ali.user.mobile.rpc.h5;
+
+import com.ali.user.mobile.rpc.RpcResponse;
+
+/* compiled from: Taobao */
+/* loaded from: classes9.dex */
+public class MtopCanChangeNickResponseData extends RpcResponse<Void> {
+    public boolean success = false;
+}

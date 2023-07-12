@@ -1,0 +1,67 @@
+package com.youku.alixplayer;
+
+/* compiled from: Taobao */
+/* loaded from: classes.dex */
+public interface ExtraID {
+    public static final int ERRCODE_AUDIODECOD_ERR = 13000;
+    public static final int ERRCODE_AUDIODECOD_NOTREADY = 13010;
+    public static final int ERRCODE_AUDIO_RENDER_OPEN_ERR = 15401;
+    public static final int ERRCODE_DRM_START = 18000;
+    public static final int ERRCODE_HTTP_ERR = 30000;
+    public static final int ERRCODE_HTTP_ERR_CDN_400 = 31400;
+    public static final int ERRCODE_HTTP_ERR_CDN_401 = 31401;
+    public static final int ERRCODE_HTTP_ERR_CDN_403 = 31403;
+    public static final int ERRCODE_HTTP_ERR_CDN_404 = 31404;
+    public static final int ERRCODE_HTTP_ERR_CDN_408 = 31408;
+    public static final int ERRCODE_HTTP_ERR_CDN_416 = 31416;
+    public static final int ERRCODE_HTTP_ERR_CDN_502 = 31502;
+    public static final int ERRCODE_HTTP_ERR_CDN_503 = 31503;
+    public static final int ERRCODE_HTTP_ERR_CDN_504 = 31504;
+    public static final int ERRCODE_LOADING_TIMEOUT = 30020;
+    public static final int ERRCODE_LOADING_TIMEOUT_CDN = 31920;
+    public static final int ERRCODE_OMX_DEQUEUE_BUFFER_DRM_ERROR = 16006;
+    public static final int ERRCODE_OMX_DEQUEUE_BUFFER_ERROR = 16002;
+    public static final int ERRCODE_OMX_INIT_DRM_ERROR = 16005;
+    public static final int ERRCODE_OMX_INIT_ERROR = 16001;
+    public static final int ERRCODE_OMX_NOT_SUPPORT_DOLBY = 16003;
+    public static final int ERRCODE_OMX_NOT_SUPPORT_DTS = 16004;
+    public static final int ERRCODE_OMX_OUT_OF_MEMORY = 16007;
+    public static final int ERRCODE_PARSER_SEEK_BUFFER_ERR = 12000;
+    public static final int ERRCODE_PARSER_SEEK_STREAM_ERR = 12010;
+    public static final int ERRCODE_PLAYING_NET_ERR = 14000;
+    public static final int ERRCODE_PREPARE_TIMEOUT = 30010;
+    public static final int ERRCODE_PREPARE_TIMEOUT_CDN = 31910;
+    public static final int ERRCODE_RENDER_TC_CONFIG_FILE_NOT_EXIST = 15501;
+    public static final int ERRCODE_RENDER_TC_FILTER_INIT_FAILED = 15502;
+    public static final int ERRCODE_SNAPSHOT_ERROR = 15403;
+    public static final int ERRCODE_SNAPSHOT_VIDEO_ENCODER_MODE = 15407;
+    public static final int ERRCODE_UNKNOWN_ERR = 19990;
+    public static final int ERRCODE_UNREGULAR_END_ERR = 14001;
+    public static final int ERRCODE_UP_CREATE_ADECODER_ERR = 11090;
+    public static final int ERRCODE_UP_CREATE_SCREENSHOT_ERR = 11130;
+    public static final int ERRCODE_UP_CREATE_VDECODER_ERR = 11110;
+    public static final int ERRCODE_UP_EXTRACTOR_TSSEGNUMBER_ERR = 11602;
+    public static final int ERRCODE_UP_FINDSTREAMINFO_ERR = 11030;
+    public static final int ERRCODE_UP_FINDSTREAMINFO_ERR_3 = 11033;
+    public static final int ERRCODE_UP_INIT_SCREENSHOT_ERR = 11140;
+    public static final int ERRCODE_UP_NO_STREAM = 11060;
+    public static final int ERRCODE_UP_OPENINPUTFORMAT_ERR = 11010;
+    public static final int ERRCODE_UP_OPENINPUTFORMAT_ERRTS_0 = 11600;
+    public static final int ERRCODE_UP_OPENINPUTFORMAT_ERRTS_X = 11601;
+    public static final int ERRCODE_UP_OPENINPUTFORMAT_ERR_1 = 11011;
+    public static final int ERRCODE_UP_OPENINPUTFORMAT_ERR_2 = 11012;
+    public static final int ERRCODE_UP_OPENINPUTFORMAT_ERR_3 = 11013;
+    public static final int ERRCODE_UP_OPENINPUTFORMAT_ERR_4 = 11014;
+    public static final int ERRCODE_UP_OPENINPUTFORMAT_ERR_5 = 11015;
+    public static final int ERRCODE_UP_OPENINPUTFORMAT_ERR_6 = 11016;
+    public static final int ERRCODE_UP_OPENINPUTFORMAT_ERR_7 = 11017;
+    public static final int ERRCODE_UP_OPENINPUTFORMAT_ERR_8 = 11018;
+    public static final int ERRCODE_UP_OPENINPUTFORMAT_ERR_9 = 11019;
+    public static final int ERRCODE_UP_PREPARE_ERR = 11020;
+    public static final int ERRCODE_UP_PREPARE_ERR_1 = 11021;
+    public static final int ERRCODE_UP_START_NOTREADY = 11160;
+    public static final int ERRCODE_URL_INVALID = 30030;
+    public static final int ERRCODE_VIDEODECOD_ERR = 13100;
+    public static final int ERRCODE_VIDEO_CODEC_CHANGED_ERR = 14002;
+    public static final int ERRCODE_VIDEO_OPEN_DEVICE_ERROR = 15001;
+}

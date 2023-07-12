@@ -1,0 +1,71 @@
+package com.youku.resource.utils;
+
+import java.io.Serializable;
+
+/* compiled from: Taobao */
+/* loaded from: classes3.dex */
+public class StaticColorDefine implements Serializable {
+    public static final String CB_1 = "cb_1";
+    public static final String CB_10 = "cb_10";
+    public static final String CB_11 = "cb_11";
+    public static final String CB_12 = "cb_12";
+    public static final String CB_2 = "cb_2";
+    public static final String CB_3 = "cb_3";
+    public static final String CB_4 = "cb_4";
+    public static final String CB_5 = "cb_5";
+    public static final String CB_6 = "cb_6";
+    public static final String CB_7 = "cb_7";
+    public static final String CB_8 = "cb_8";
+    public static final String CB_9 = "cb_9";
+    public static final String CD_1 = "cd_1";
+    public static final String CG_1 = "cg_1";
+    public static final String CG_10 = "cg_10";
+    public static final String CG_11 = "cg_11";
+    public static final String CG_12 = "cg_12";
+    public static final String CG_13 = "cg_13";
+    public static final String CG_14 = "cg_14";
+    public static final String CG_15 = "cg_15";
+    public static final String CG_16 = "cg_16";
+    public static final String CG_17 = "cg_17";
+    public static final String CG_18 = "cg_18";
+    public static final String CG_19 = "cg_19";
+    public static final String CG_2 = "cg_2";
+    public static final String CG_20 = "cg_20";
+    public static final String CG_3 = "cg_3";
+    public static final String CG_4 = "cg_4";
+    public static final String CG_5 = "cg_5";
+    public static final String CG_6 = "cg_6";
+    public static final String CG_7 = "cg_7";
+    public static final String CG_8 = "cg_8";
+    public static final String CG_9 = "cg_9";
+    public static final String CO_1 = "co_1";
+    public static final String CO_10 = "co_10";
+    public static final String CO_11 = "co_11";
+    public static final String CO_12 = "co_12";
+    public static final String CO_2 = "co_2";
+    public static final String CO_3 = "co_3";
+    public static final String CO_4 = "co_4";
+    public static final String CO_5 = "co_5";
+    public static final String CO_6 = "co_6";
+    public static final String CO_7 = "co_7";
+    public static final String CO_8 = "co_8";
+    public static final String CO_9 = "co_9";
+    public static final String CP_1 = "cp_1";
+    public static final String CP_2 = "cp_2";
+    public static final String CP_3 = "cp_3";
+    public static final String CP_4 = "cp_4";
+    public static final String CP_5 = "cp_5";
+    public static final String CR_1 = "cr_1";
+    public static final String CR_2 = "cr_2";
+    public static final String CR_3 = "cr_3";
+    public static final String CV_1 = "cv_1";
+    public static final String CV_2 = "cv_2";
+    public static final String CV_3 = "cv_3";
+    public static final String CV_4 = "cv_4";
+    public static final String CV_5 = "cv_5";
+    public static final String CW_1 = "cw_1";
+    public static final String CY_1 = "cy_1";
+    public static final String CY_2 = "cy_2";
+    public static final String CY_3 = "cy_3";
+    public static final String CY_4 = "cy_4";
+}

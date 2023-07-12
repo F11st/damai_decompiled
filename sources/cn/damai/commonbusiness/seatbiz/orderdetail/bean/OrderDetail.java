@@ -1,0 +1,72 @@
+package cn.damai.commonbusiness.seatbiz.orderdetail.bean;
+
+import cn.damai.base.BaseAfterLoginModel;
+import java.util.List;
+
+/* compiled from: Taobao */
+/* loaded from: classes.dex */
+public class OrderDetail extends BaseAfterLoginModel {
+    public double Amount;
+    public List<YPYZInfo> Audiences;
+    public boolean C;
+    public int CategoryID;
+    public List<String> CompanyAddr;
+    public String CreateTime;
+    public String CreateTimeString;
+    public String DeliveryMethod;
+    public int DeliveryMethodId;
+    public double DeliveryPrice;
+    public String ExpressCompanyName;
+    public String ExpressID;
+    public String FromCity;
+    public String FullAdd;
+    public String IdCard;
+    public String InvoiceTitle;
+    public boolean IsPayTime;
+    public String Mobilephone;
+    public String NewOrderStatus;
+    public String Note;
+    public String OrderStatus;
+    public int OrderSuccess;
+    public String OrderType;
+    public boolean P;
+    public String PayAmount;
+    public String PayStatus;
+    public int PayTime;
+    public String PayTimeMessage;
+    public String Payment;
+    public String PlayTime;
+    public long ProjectID;
+    public String ProjectName;
+    public int Quantity;
+    public String ReimbursementAmount;
+    public String SerialNumber;
+    public long ServerOrderID;
+    public boolean ShowReimbursementButton;
+    public List<SuperTickt> SuperTickets;
+    public String Telephoone;
+    public List<TrackInfo> TrackInfo;
+    public String UserEmail;
+    public String UserName;
+    public String VenueID;
+    public String VenueName;
+    public double couponsPrice;
+    public OrderDetailInvoice invoice;
+    public boolean isAddress;
+    public String isAddressStr;
+    public boolean isPayoff;
+    public boolean isShowEticket;
+    public boolean isShowSerialNumber;
+    public jinPai jinPai;
+    public int jinPaiStatus;
+    public List<PayInfo> list;
+    public String nProjectId;
+    public String orderFraudNotice;
+    public OrderReward orderReward;
+    public float policyAmount;
+    public String policyId;
+    public OrderSelectYhzcItem promotionInfoDto;
+    public double scoreLostAmount;
+    public List<SeatItem> seatList;
+    public String serviceReminder;
+}
